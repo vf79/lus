@@ -1,4 +1,4 @@
-# License User Statistics - LUS
+# License User Statistic
 
 ## Sobre
 
@@ -116,7 +116,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 ### Tecnologias
 
 [Python](https://python.org)
+
 [PostgreSQL](https://www.postgresql.org/)
+
 [SqlAlchemy](https://www.sqlalchemy.org/)
 
 ### Testes
@@ -152,7 +154,7 @@ Para rodar o programa:
 
 ## Contribuindo
 
-[Contribuindo](./contributing.md)
+[Contribuindo](./contribute.md)
 
 ## Autor
 
@@ -160,4 +162,4 @@ Para rodar o programa:
 
 ## Licença
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](./LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](./license.md)

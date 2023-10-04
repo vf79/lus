@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "lus"
+version = "0.1.0"
+description = "Aplicativo para listar o uso concorrente de licenças"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Framework :: FastAPI",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Natural Language :: Portuguese (Brazilian)",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = ["mkdocs", "mkdocs-material"]
+test = ["pytest", "pytest-cov"]
+lint = ["flake8", "flake8-docstrings", "pyproject-flake8", "black", "isort"]
+
+[project.scripts]
+lus = "lus.lm:main"
+
+[tool.isort]
+py_version=310
+
+[project.urls]
+homepage = "https://vf79.com.br/projetos/project_template"
+repository = "https://github.com/vf79/lus"

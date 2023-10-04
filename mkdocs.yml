@@ -1,0 +1,34 @@
+site_name: License User Statistic
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+  palette:
+    scheme: default
+    primary: teal
+    accent: light blue
+
+extra:
+  social:
+    - icon: fontawesome/brands/git-alt
+      link: https://github.com/vf79/lus
+    - icon: material/school
+      link: https://www.ufpr.br
+      name: Universidade Federal do Paraná
+  generator: false
+  consent:
+    actions:
+      - accept
+    title: Gerenciar os cookies
+    description: >-
+      Para otimizar a experiência durante a sua navegação em nosso site, fazemos
+      uso de cookies. Ao continuar na nossa plataforma, consideramos que você
+      esteja de acordo com nossa política de cookies.

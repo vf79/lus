@@ -1,0 +1,15 @@
+[default]
+env = "testing"
+name = "Licensing User Statistic"
+version = "0.1.0"
+debug = false
+
+[development]
+ambiente = "desenvolvimento"
+debug = true
+
+[production]
+ambiente = "producao"
+
+[testing]
+ambiente = "testes"
