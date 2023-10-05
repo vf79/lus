@@ -7,7 +7,7 @@ LOG_LEVEL = os.getenv("LOG_LEVEL", "WARNING").upper()
 log = logging.getLogger("lus")
 fmt = logging.Formatter(
     "%(asctime)s - [%(name)s][%(levelname)s]msg: %(message)s",
-    datefmt="%Y-%m-%dT%H:%M:%S%z"
+    datefmt="%Y-%m-%dT%H:%M:%S%z",
 )
 
 

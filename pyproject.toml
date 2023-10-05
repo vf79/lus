@@ -32,5 +32,5 @@ lus = "lus.lm:main"
 py_version=310
 
 [project.urls]
-homepage = "https://vf79.com.br/projetos/project_template"
+homepage = "https://vf79.github.io/lus/"
 repository = "https://github.com/vf79/lus"

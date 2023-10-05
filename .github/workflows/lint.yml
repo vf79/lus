@@ -1,0 +1,37 @@
+name: lint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "main"
+
+  workflow_dispatch:
+
+jobs:
+  lint:
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.11"]
+        os: [ubuntu-latest]
+
+    runs-on: ${{matrix.os}}
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{matrix.python-version}}
+      - name: Install Project
+        run: pip install '.[lint]'
+      - name: Look por style errors
+        run: pflake8
+      - name: Check por import style
+        run: isort --profile=black --check --diff lus
+      - name: Look por auto format errors
+        run: black --check --diff lus
