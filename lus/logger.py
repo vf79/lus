@@ -3,6 +3,9 @@ import logging
 import os
 from logging import handlers
 
+filename = "lus.log"
+path = os.path.join("c:", os.sep, "Licensing", "lus", filename)
+
 LOG_LEVEL = os.getenv("LOG_LEVEL", "WARNING").upper()
 log = logging.getLogger("lus")
 fmt = logging.Formatter(
@@ -11,7 +14,7 @@ fmt = logging.Formatter(
 )
 
 
-def get_logger(logfile="lus.log"):
+def get_logger(logfile=path):
     """Set a default configured logger."""
     fh = handlers.RotatingFileHandler(
         logfile,

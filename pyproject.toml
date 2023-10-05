@@ -17,11 +17,10 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Natural Language :: Portuguese (Brazilian)",
 ]
-dependencies = [
-]
+dependencies = ["scapy"]
 
 [project.optional-dependencies]
-dev = ["mkdocs", "mkdocs-material"]
+dev = ["mkdocs", "mkdocs-material", "ipdb", "ipython"]
 test = ["pytest", "pytest-cov"]
 lint = ["flake8", "flake8-docstrings", "pyproject-flake8", "black", "isort"]
 
