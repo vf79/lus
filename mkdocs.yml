@@ -12,9 +12,20 @@ theme:
     - search.suggest
     - toc.integrate
   palette:
-    scheme: default
-    primary: teal
-    accent: light blue
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
 
 extra:
   social:

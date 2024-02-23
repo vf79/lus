@@ -1,6 +1,6 @@
-# Contribuição para o projeto '<PROJETO_NAME>'
+# Contribuição para o projeto LUS
 
-Seja bem vindo e obrigado por considerar contribuir para o projeto '<PROJETO_NAME>' de código aberto! São pessoas como você que tornam a vida de nossos usuários melhor.
+Seja bem vindo e obrigado por considerar contribuir para o projeto LUS de código aberto! São pessoas como você que tornam a vida de nossos usuários melhor.
 
 Ler e seguir as orientações ajuda a tornar o processo de contribuição fácil e eficaz para todos os envolvidos.
 

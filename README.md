@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Aplicativo para gerar estatisticas de uso de licenças concorrentes.
+Aplicativo para monitorar e gerar estatisticas de uso de licenças concorrentes.
 
 ## Tabela de Conteúdos
 
@@ -87,6 +87,12 @@ Instalar as dependências de qualidade do projeto:
 .\run.cmd --install-lint
 ```
 
+Instalar todas as dependências do projeto:
+
+```powershell
+.\run.cmd --install-all
+```
+
 #### Gerar Secret Key
 
 Para gerar o secret key da aplicação usando python execute:
@@ -97,6 +103,10 @@ secrets.token_urlsafe(32)
 ```
 
 Inserir a chave gerada no arquivo .secrets.toml
+
+Há um exemplo do arquivo .secrets.toml em example.secrets.toml
+
+> O arquivo .secrets.toml está configurado no arquivo .gitignore para não ser carregado no repositório do git. Porém o arquivo example.secrets.toml será carregado no repositório git.
 
 #### Extras
 
@@ -160,4 +170,4 @@ Para rodar o programa:
 
 ## Licença
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.txt)

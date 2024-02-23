@@ -193,5 +193,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Directories
+assets
+
 # Secrets not push to repository
 **/.secrets.*
