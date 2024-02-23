@@ -1,4 +1,4 @@
-# Contribuindo
+# Contribuição para o projeto LUS
 
 Seja bem vindo e obrigado por considerar contribuir para o projeto LUS de código aberto! São pessoas como você que tornam a vida de nossos usuários melhor.
 

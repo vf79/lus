@@ -1,7 +1,7 @@
 @echo off
 
 chcp 65001
-set name="app"
+set name="lum" "lus"
 
 if "%1"=="--clean" goto clean
 if "%1"=="--docs" goto docs
@@ -9,7 +9,9 @@ if "%1"=="--env" goto env
 if "%1"=="--execute" goto execute
 if "%1"=="--formate" goto formate
 if "%1"=="--install" goto install
+if "%1"=="--install-all" goto install-all
 if "%1"=="--install-dev" goto install-dev
+if "%1"=="--install-docs" goto install-docs
 if "%1"=="--install-lint" goto install-lint
 if "%1"=="--install-test" goto install-test
 if "%1"=="--lint" goto lint
@@ -20,9 +22,11 @@ goto help
 
 :clean
     set list-dirs=build dist htmlcov site
+    set r_list_dirs=__pycache__ *.egg-info
+    set files=*.pyc .coverage
     echo "Excluindo arquivos e diretorios desnecessários..."
-    for /r . %%f in (*.pyc, .coverage) do @if exist "%%f" del "%%f"
-    for /d /r . %%d in (__pycache__, *.egg-info, .pytest_cache) do @if exist "%%d" rd /s /q "%%d"
+    for /r . %%f in (%files%) do @if exist "%%f" del "%%f"
+    for /d /r . %%d in (%r_list_dirs%) do @if exist "%%d" rd /s /q "%%d"
     for %%a  in (%list-dirs%) do @if exist "%%a" rd /s /q "%%a"
 goto end
 
@@ -39,16 +43,13 @@ goto end
 goto end
 
 :execute
-    echo "Para executar a aplicação digite:"
-    echo ""
-    echo ""
+    echo "Para executar a aplicação no terminal digite:"
 goto end
 
 :formate
     echo "Formatando o codigo..."
     isort .
     black -l 79 .
-    flake8 .
 goto end
 
 :install
@@ -56,9 +57,18 @@ goto end
     pip install -e .
 goto end
 
+:install-all
+    echo "Instalando todas as dependências..."
+    pip install -e .[dev,docs,lint,test]
+
 :install-dev
     echo "Instalando dependências de desenvolvimento..."
     pip install -e .[dev]
+goto end
+
+:install-docs
+    echo "Instalando dependências de documentação..."
+    pip install -e .[doc]
 goto end
 
 :install-lint
@@ -102,7 +112,9 @@ goto end
     echo "execute - Exibe o comando para executar o app"
     echo "formate - Formata o codigo em 80 colunas"
     echo "install - Instala dependências"
+    echo "install-all - Instala todas as dependências:[dev,docs,lint,test]"
     echo "install-dev - Instala dependências de desenvolvimento"
+    echo "install-docs - Instala dependências de documentação"
     echo "install-lint - Instala dependências de lint"
     echo "install-test - Instalac dependências de testes"
     echo "lint - Executa varreduras de qualidade de formatacao de codigo"

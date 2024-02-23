@@ -1,1 +1,1 @@
-"""LUS Module."""
+"""LUS - License User Statistics."""
